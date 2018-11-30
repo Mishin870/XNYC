@@ -1,0 +1,275 @@
+ul {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    list-style-type: none;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Open Sans", serif;
+    background-color: #fff;
+    background: url(../img/background.jpg);
+
+}
+
+.wrapper {
+    z-index: 9999431999;
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height: 75vh;
+    border-radius: 6px;
+    box-shadow: 0 0 1em rgb(0, 0, 0);
+    background-color: #fff;
+}
+
+.head {
+    padding: 14px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-shadow: 0 2px 2px -3px;
+}
+
+.dots > i {
+    margin-right: 2px;
+}
+
+.dots > i:nth-child(1) {
+    color: #f57e7d;
+}
+
+.dots > i:nth-child(2) {
+    color: #ffc881;
+}
+
+.dots > i:nth-child(3) {
+    color: #82cf85;
+    flex-grow: 1;
+}
+
+.dots, .full-screen {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+}
+
+.title {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    width: 100%;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.full-screen > i {
+    color: #cfd6e0;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.body {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+#loginWindow, #errorWindow {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    background-color: #1a790d;
+    width: 300px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.button:hover, .button.disabled {
+    opacity: 0.8;
+}
+
+#loginWindowHash {
+    border-radius: 5px;
+    font-size: 16px;
+    min-height: 40px;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #d1d5da;
+}
+
+.menu {
+    background-color: #075628;
+    min-width: 176px;
+}
+
+.menu li {
+    position: relative;
+    padding: 15px;
+    color: #9bda97;
+    border-bottom: 2px solid #355a38;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.menu li i.fa-list-alt, .menu li i.fa-circle-o {
+    margin-right: 14px;
+    color: #9bda97;
+    font-size: 1.2em;
+}
+
+.menu li i.fa-circle-o.online {
+    color: #9bda97;
+}
+
+.menu li i.fa-circle-o.offline {
+    color: #f57e7d;
+}
+
+.menu li i.fa-times {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 10px;
+    right: 10px;
+    margin: auto;
+    color: #79889d;
+    font-size: 10px;
+}
+
+.menu li:hover, .menu li.active {
+    background: #0c6732;
+    color: #fff;
+}
+
+.chatBody {
+    flex: 1 1 auto;
+}
+
+.titleChat {
+    box-shadow: 0 2px 2px -3px;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.message {
+    padding: 4px 10px 7px !important;
+    border-radius: 10px 10px 10px 0;
+    background: #8080802b;
+    font-size: 12px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+    word-wrap: break-word;
+    width: auto;
+    margin-bottom: 15px;
+    float: left;
+}
+
+
+.chatMessages {
+    padding: 10px;
+    overflow-y: scroll;
+    height: calc(100% - 72px);
+}
+
+.chatMessages::-webkit-scrollbar
+{
+    width: 10px;
+    background-color: #F5F5F5;
+}
+
+.chatMessages::-webkit-scrollbar-thumb
+{
+    background-color: #015926;
+    border-radius: 10px;
+}
+
+.message-text {
+    word-break: break-word;
+}
+
+.message-time {
+    float: right;
+    text-align: right;
+    color: #9a9a9a;
+    position: relative;
+    top: 4px;
+}
+
+.message:after {
+    clear: both;
+}
+
+.message-main-sender {
+    float: right;
+    width: auto !important;
+    background: #dcf8c6;
+    border-radius: 10px 10px 0 10px;
+    padding: 4px 10px 7px !important;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.message-main-sender .message-time {
+    float: left;
+}
+
+.divMessage:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.clearfix {
+    clear: both;
+}
+
+#messageInput {
+    width: 100%;
+    height: 35px;
+    border: 0;
+    border-radius: 0 0 6px 0;
+    padding: 8px;
+}
+
+#messageInput:focus {
+    outline: none;
+}
+
+.messageBox {
+    position: relative;
+    box-shadow: 0 -2px 5px -3px;
+}
+
+.messageBox button {
+    background-color: #fff;
+    border: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0 0 6px 0;
+    cursor: pointer;
+}
+.messageBox i {
+    color: #4d794a;
+}
